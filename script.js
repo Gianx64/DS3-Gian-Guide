@@ -11,7 +11,7 @@ const buttonElements = [
     document.getElementById("buttonLuck"),
 ];
 const buttons = [false, true, null, null, null, null, null, null, null, false];
-const classes = ['Knight', 'Mercenary', 'Warrior', 'Herald', 'Thief', 'Assassin', 'Sorcerer', 'Pyromancer', 'Cleric', 'Deprived'];
+const classNames = ['Knight', 'Mercenary', 'Warrior', 'Herald', 'Thief', 'Assassin', 'Sorcerer', 'Pyromancer', 'Cleric', 'Deprived'];
 const values = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 //(Soul) Level, Vigor, Attunement, Endurance, Vitality, Strength, Dexterity, Intelligence, Faith, Luck
 const attributes = [
@@ -55,7 +55,7 @@ function getBestClass() {
                     total = total - attributes[i][j];
        }
        values[i] = total;
-       console.log("Total for "+classes[i]+" is: "+total);
+       console.log("Total for "+classNames[i]+" is: "+total);
     }
     let most = values[0];
     for (i = 1; i < values.length; i++)
@@ -64,7 +64,7 @@ function getBestClass() {
     let bestClasses = [];
     for (let i = 0; i < values.length; i++)
         if (most == values[i])
-            bestClasses.push(classes[i]);
+            bestClasses.push(classNames[i]);
     console.log("Best classes are: "+bestClasses);
     document.getElementById('bestClass').innerHTML = bestClasses[0];
     if (bestClasses.length > 1)
