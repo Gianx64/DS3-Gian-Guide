@@ -11,6 +11,37 @@ th,td {
     padding:5px 10px;
     border:1px solid #999;
 }
+.imgButton {
+    padding-inline: 8px;
+    text-align: center;
+}
+.imgButton:hover {
+    background: black;
+}
+#bestClass {
+    width: 100%;
+    text-align: center;
+}
+#bestClassButton {
+    color: black;
+    width: 100%;
+    height: 40px;
+}
+.imgCard {
+    padding-inline: 8px;
+}
+.redButton {
+    background-color: red;
+    color: white;
+}
+.greenButton {
+    background-color: green;
+    color: white;
+}
+.whiteButton {
+    background-color: white;
+    color: black;
+}
 * {
     color: white;
 }
